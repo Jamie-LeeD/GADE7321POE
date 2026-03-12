@@ -1,0 +1,19 @@
+{
+  "dialogues": [
+    {
+      "title": "Welcome Hero",
+      "message": "Welcome to the floating platform trial.",
+      "icon": "guide"
+    },
+    {
+      "title": "Watch Your Step",
+      "message": "Falling into the void will cost a life.",
+      "icon": "warning"
+    },
+    {
+      "title": "Collect Coins",
+      "message": "Collect coins to increase your score.",
+      "icon": "coin"
+    }
+  ]
+}
