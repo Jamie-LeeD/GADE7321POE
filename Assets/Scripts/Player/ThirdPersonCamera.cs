@@ -3,19 +3,36 @@ using UnityEngine;
 public class ThirdPersonCamera : MonoBehaviour
 {
     public Transform target;
-    public Vector3 offset = new Vector3(0, 4, -6);
 
-    public float smoothSpeed = 5f;
+    public float mouseSensitivity = 500f;
+
+    public float distance = 6f;
+    public float height = 2f;
+
+    float xRotation = 0f;
+    float yRotation = 0f;
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     void LateUpdate()
     {
-        Vector3 desiredPosition = target.position + offset;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        Vector3 smoothedPosition =
-            Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+        yRotation += mouseX;
+        xRotation -= mouseY;
 
-        transform.position = smoothedPosition;
+        xRotation = Mathf.Clamp(xRotation, -30f, 60f);
 
-        transform.LookAt(target);
+        Quaternion rotation = Quaternion.Euler(xRotation, yRotation, 0);
+
+        Vector3 offset = rotation * new Vector3(0, height, -distance);
+
+        transform.position = target.position + offset;
+
+        transform.LookAt(target.position + Vector3.up * 1.5f);
     }
 }

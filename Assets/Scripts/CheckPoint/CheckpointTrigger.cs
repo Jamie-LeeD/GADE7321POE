@@ -6,13 +6,13 @@ public class CheckpointTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //PlayerStats stats = other.GetComponent<PlayerStats>();
+            PlayerStats stats = other.GetComponent<PlayerStats>();
 
-            //CheckpointManager.instance.SaveCheckpoint(
-            //    transform.position,
-            //    stats.lives,
-            //    stats.score
-            //);
+            CheckpointManager.instance.SaveCheckpoint(
+                transform.position,
+                stats.lives,
+                stats.score
+            );
         }
     }
 }
