@@ -4,11 +4,19 @@ public class CheckpointManager : MonoBehaviour
 {
     private MyStack<CheckpointData> checkpointStack = new MyStack<CheckpointData>();
 
-    public static CheckpointManager instance;
+    public static CheckpointManager Instance;
 
-    void Awake()
+    private void Awake()
     {
-        instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SaveCheckpoint(Vector3 position, int lives, int score)

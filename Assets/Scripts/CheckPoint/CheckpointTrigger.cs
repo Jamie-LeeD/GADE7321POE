@@ -8,7 +8,7 @@ public class CheckpointTrigger : MonoBehaviour
         {
             PlayerStats stats = other.GetComponent<PlayerStats>();
 
-            CheckpointManager.instance.SaveCheckpoint(
+            CheckpointManager.Instance.SaveCheckpoint(
                 transform.position,
                 stats.lives,
                 stats.score

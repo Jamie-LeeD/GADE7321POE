@@ -1,47 +1,46 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+//[RequireComponent(typeof(CharacterController))]
+public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 6f;
-    public float rotationSpeed = 10f;
-    public float jumpForce = 8f;
-    public float gravity = -20f;
-    public float airControl = 0.5f;
-
+    [Header("References")]
     public Transform cameraTransform;
     public Transform groundCheck;
-    public float groundDistance = 0.3f;
     public LayerMask groundLayer;
 
-    public int maxJumps = 2;
-
     private CharacterController controller;
-    private Vector3 velocity;
-    private Vector3 moveDirection;
+    private PlayerInput input;
+    private PlayerStamina stamina;
 
-    private bool isGrounded;
-    private int jumpCount;
-
-    [Header("Sprint Settings")]
+    [Header("Movement")]
     public float walkSpeed = 6f;
     public float sprintSpeed = 10f;
-    public float stamina = 5f;
-    public float maxStamina = 5f;
-    public float staminaDrainRate = 1.5f;
-    public float staminaRegenRate = 1f;
+    public float rotationSpeed = 10f;
+    public float airControl = 0.5f;
 
+    [Header("Jump & Gravity")]
+    public float jumpForce = 8f;
+    public float gravity = -20f;
+    public float groundDistance = 0.3f;
+    public int maxJumps = 2;
+
+    private Vector3 velocity;
+    private Vector3 moveDirection;
+    private bool isGrounded;
+    private int jumpCount;
     private bool isSprinting;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        input = GetComponent<PlayerInput>();
+        stamina = GetComponent<PlayerStamina>();
     }
 
     void Update()
     {
         CheckGround();
-        HandleSprint();    
-        HandleMovement();  
+        HandleMovement();
         HandleGravity();
         MoveCharacter();
     }
@@ -59,33 +58,38 @@ public class PlayerController : MonoBehaviour
 
     void HandleMovement()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        Vector2 moveInput = input.MoveInput;
 
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
 
-        forward.y = 0f;
-        right.y = 0f;
+        forward.y = 0;
+        right.y = 0;
 
         forward.Normalize();
         right.Normalize();
 
-        Vector3 inputDirection = (forward * vertical + right * horizontal);
+        Vector3 inputDirection = forward * moveInput.y + right * moveInput.x;
         inputDirection = Vector3.ClampMagnitude(inputDirection, 1f);
+
+        // Sprint logic (delegated decision)
+        isSprinting = input.SprintHeld && stamina.CanSprint() && isGrounded && inputDirection.magnitude > 0.1f;
+
+        stamina.UseStamina(isSprinting);
+
+        float speed = isSprinting ? sprintSpeed : walkSpeed;
 
         if (isGrounded)
         {
-            float currentSpeed = isSprinting ? sprintSpeed : walkSpeed;
-            moveDirection = inputDirection * currentSpeed;
+            moveDirection = inputDirection * speed;
         }
         else
         {
-            Vector3 airMove = inputDirection * moveSpeed * airControl;
+            Vector3 airMove = inputDirection * speed * airControl;
             moveDirection = Vector3.Lerp(moveDirection, airMove, Time.deltaTime);
         }
 
-        // Smooth rotation
+        // Rotation
         if (inputDirection != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(inputDirection);
@@ -93,31 +97,13 @@ public class PlayerController : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetButtonDown("Jump") && jumpCount < maxJumps)
+        if (input.JumpPressed && jumpCount < maxJumps)
         {
             velocity.y = jumpForce;
             jumpCount++;
         }
     }
 
-    void HandleSprint()
-    {
-        bool sprintInput = Input.GetKey(KeyCode.LeftShift);
-
-        // Can sprint only if moving, grounded, and has stamina
-        if (sprintInput && stamina > 0f && moveDirection.magnitude > 0.1f && isGrounded)
-        {
-            isSprinting = true;
-            stamina -= staminaDrainRate * Time.deltaTime;
-        }
-        else
-        {
-            isSprinting = false;
-            stamina += staminaRegenRate * Time.deltaTime;
-        }
-
-        stamina = Mathf.Clamp(stamina, 0f, maxStamina);
-    }
     void HandleGravity()
     {
         velocity.y += gravity * Time.deltaTime;
