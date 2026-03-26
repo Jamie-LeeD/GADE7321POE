@@ -12,6 +12,8 @@ public class ThirdPersonCamera : MonoBehaviour
     float xRotation = 0f;
     float yRotation = 0f;
 
+    public bool canLook = true;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

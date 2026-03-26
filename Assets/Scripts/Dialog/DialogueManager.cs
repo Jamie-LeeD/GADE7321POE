@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string dialogueFileName)
     {
+        
         LoadDialogue(dialogueFileName);
         DisplayNextDialogue();
     }
@@ -62,6 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        SimpleEventBus.Instance.PostNotification(GameEventType.DialogueEnd, this);
         gameObject.SetActive(false);
     }
 }
