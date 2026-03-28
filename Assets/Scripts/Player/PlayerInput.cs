@@ -8,6 +8,8 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         MoveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         JumpPressed = Input.GetButtonDown("Jump");
         SprintHeld = Input.GetKey(KeyCode.LeftShift);

@@ -6,5 +6,11 @@ public enum GameEventType
     Jump,
     StaminaChanged,
     DialogueStart,
-    DialogueEnd
+    DialogueEnd,
+    PlayerDied,
+    RequestRespawn,
+    RestartGame,
+    LivesChanged,
+    ScoreChanged,
+    GameOver
 }

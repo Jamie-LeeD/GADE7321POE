@@ -21,6 +21,7 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
     public float jumpForce = 8f;
     public float gravity = -20f;
     public float groundDistance = 0.3f;
+    public float maxFallTime = 2.5f;
 
     [HideInInspector] public CharacterController controller;
     [HideInInspector] public PlayerInput input;
@@ -37,6 +38,9 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
         input = GetComponent<PlayerInput>();
         //animator = GetComponent<Animator>();
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         SimpleEventBus.Instance.AddListener(GameEventType.DialogueStart, this);
         SimpleEventBus.Instance.AddListener(GameEventType.DialogueEnd, this);
 
@@ -45,6 +49,7 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
         CheckGround();
 
         currentState.HandleInput();

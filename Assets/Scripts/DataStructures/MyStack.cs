@@ -45,4 +45,19 @@ public class MyStack<T>
     {
         return top == null;
     }
+
+    public T GetBottom()
+    {
+        if (top == null)
+            throw new System.Exception("Stack is empty");
+
+        Node current = top;
+
+        while (current.next != null)
+        {
+            current = current.next;
+        }
+
+        return current.data;
+    }
 }

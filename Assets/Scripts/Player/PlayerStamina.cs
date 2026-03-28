@@ -14,20 +14,17 @@ public class PlayerStamina : MonoBehaviour, ISimpleListener
 
     void Start()
     {
-        currentStamina = maxStamina;
-    }
-
-    void OnEnable()
-    {
         SimpleEventBus.Instance.AddListener(GameEventType.SprintStart, this);
         SimpleEventBus.Instance.AddListener(GameEventType.SprintStop, this);
+        currentStamina = maxStamina;
+        SimpleEventBus.Instance.PostNotification(
+        GameEventType.StaminaChanged,
+        this,
+        currentStamina / maxStamina
+    );
     }
 
-    void OnDisable()
-    {
-        SimpleEventBus.Instance.RemoveListener(GameEventType.SprintStart, this);
-        SimpleEventBus.Instance.RemoveListener(GameEventType.SprintStop, this);
-    }
+    
 
     void Update()
     {
@@ -69,5 +66,14 @@ public class PlayerStamina : MonoBehaviour, ISimpleListener
             this,
             currentStamina / maxStamina
         );
+    }
+
+    void OnDestroy()
+    {
+        if (SimpleEventBus.Instance != null)
+        {
+            SimpleEventBus.Instance.RemoveListener(GameEventType.SprintStart, this);
+            SimpleEventBus.Instance.RemoveListener(GameEventType.SprintStop, this);
+        }
     }
 }

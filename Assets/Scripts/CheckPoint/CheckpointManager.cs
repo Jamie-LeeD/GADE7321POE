@@ -28,11 +28,43 @@ public class CheckpointManager : MonoBehaviour
 
         Debug.Log("Checkpoint Saved");
     }
-    public CheckpointData GetCurrentCheckpoint()
+    public CheckpointData LoadCheckpoint()
+    {
+        if (checkpointStack.IsEmpty())
+        {
+            Debug.LogWarning("No checkpoint available!");
+            return null;
+        }
+
+        return checkpointStack.Peek();
+    }
+    public CheckpointData GetCurrentCheckpoint() 
+    {
+        if (checkpointStack.IsEmpty()) 
+            return null;
+        return checkpointStack.Peek(); 
+    }
+
+    public void SaveInitialCheckpoint(Transform player, PlayerStats stats)
+    {
+        checkpointStack = new MyStack<CheckpointData>(); // clear old data
+
+        CheckpointData checkpoint = new CheckpointData(
+            player.position,
+            stats.lives,
+            stats.score
+        );
+
+        checkpointStack.Push(checkpoint);
+
+        Debug.Log("Initial checkpoint saved");
+    }
+
+    public CheckpointData GetFirstCheckpoint()
     {
         if (checkpointStack.IsEmpty())
             return null;
 
-        return checkpointStack.Peek();
+        return checkpointStack.GetBottom();
     }
 }

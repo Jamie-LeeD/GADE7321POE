@@ -4,16 +4,16 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject Dialogue;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI messageText;
     public Image iconImage;
 
     private MyQueue<DialogueItem> dialogueQueue = new MyQueue<DialogueItem>();
 
-
     public void StartDialogue(string dialogueFileName)
     {
-        
+        Dialogue.SetActive(true);
         LoadDialogue(dialogueFileName);
         DisplayNextDialogue();
     }
@@ -64,6 +64,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         SimpleEventBus.Instance.PostNotification(GameEventType.DialogueEnd, this);
-        gameObject.SetActive(false);
+        Dialogue.SetActive(false);
     }
 }
