@@ -12,7 +12,7 @@ PART 1 - INDIVIDUAL TASKS
 ------------------------------------------------------------------------------------------------------------------------------------------------
 ST10453245 Documentation - [ST10453245_IndividualReport_P1.pdf](https://github.com/user-attachments/files/26384745/ST10453245_IndividualReport_P1.pdf)
 
-ST10453245 Video Presentation - 
+ST10453245 Video Presentation - https://canva.link/4gq724o0eemwpqr 
 
 
 ST10441037 Documentation - [ST10441037_GADEP1_Report.pdf](https://github.com/user-attachments/files/26384761/ST10441037_GADEP1_Report.pdf)
