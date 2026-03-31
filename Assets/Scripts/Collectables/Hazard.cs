@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player hit hazard!");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            // Fire event instead of directly changing lives
+            SimpleEventBus.Instance.PostNotification(
+                GameEventType.PlayerDied,
+                this
+            );
+        }
     }
 }

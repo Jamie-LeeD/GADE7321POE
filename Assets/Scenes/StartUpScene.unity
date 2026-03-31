@@ -385,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &205881108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1883,8 +1883,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.883, y: 11.5962}
-  m_SizeDelta: {x: 861.6494, y: 425.9927}
+  m_AnchoredPosition: {x: 13.8322, y: -29.5698}
+  m_SizeDelta: {x: 879.5476, y: 508.3248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973477458
 MonoBehaviour:
@@ -1906,7 +1906,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "GUIDE\nWASD - to move around \nSPACE - to Jump.\n\nHOW TO PLAY\nss"
+  m_text: "GUIDE\nWASD - to move around \nSPACE - to Jump.\n\nHOW TO PLAY\nMake you
+    way though platfroms, collecting selkie skins. Checkpoints can save progress,
+    unless you lose all your life, which you will restart from the beginning. Once
+    you reach the anchor you will be able to progress to the next level. Take care
+    not to fall off platfroms or into the water. This will make you lose a life."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
