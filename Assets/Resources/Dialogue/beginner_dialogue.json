@@ -1,19 +1,69 @@
 {
   "dialogues": [
     {
-      "title": "Welcome Hero",
-      "message": "Welcome to the floating platform trial.",
-      "icon": "guide"
+      "title": "Narrator",
+      "message": "Long ago, a selkie’s skin was stolen by an old sailor. When a selkie’s skin is taken she is trapped in human form and can no longer return to the sea, only yearn for it.",
+      "icon": "narrator_icon"
     },
     {
-      "title": "Watch Your Step",
-      "message": "Falling into the void will cost a life.",
-      "icon": "warning"
+      "title": "Selkie",
+      "message": "He took my skin from me. Without it I do not belong anywhere, not on land and not in the sea. I have to find it. ",
+      "icon": "selkie_icon"
     },
     {
-      "title": "Collect Coins",
-      "message": "Collect coins to increase your score.",
-      "icon": "coin"
-    }
+      "title": "Narrator",
+      "message": "What remains of her stolen skin lies scattered across broken docks and drifting platforms above the open ocean. ",
+      "icon": "narrator_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "You will need to move across these docks. Jump carefully from one to the next. Your timing matters. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Some docks are further apart than they seem. Move with enough speed before you jump or you may not make it. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Fragments of your seal skin are scattered along this path. Collect them to begin restoring what was taken from you.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Selkie",
+      "message": "I can feel them. Pieces of myself, lost and waiting for me to reclaim them. I will not leave them behind.",
+      "icon": "selkie_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "The particles you see mark checkpoints. Step on them to save your progress. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "If you fall into the ocean you will return to the last checkpoint you reached, but you will lose a life. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Narrator",
+      "message": "The ocean below is not a way home. Not yet. ",
+      "icon": "narrator_icon"
+    },
+    {
+      "title": "Selkie",
+      "message": "It is calling me. I can hear it, but I cannot go back like this, with legs. I will only be worthy with a tail. ",
+      "icon": "selkie_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Reach the final platform to complete this level and continue your journey back to the sea. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Narrator",
+      "message": "With every step forward she moves closer to the sea, and closer to becoming herself again. ",
+      "icon": "narrator_icon"
+    }   
   ]
 }
