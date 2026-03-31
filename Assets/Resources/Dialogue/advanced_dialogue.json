@@ -1,0 +1,69 @@
+{
+  "dialogues": [
+    {
+      "title": "Narrator",
+      "message": "The journey grows more unstable. The wreckage drifts and shifts with the tide, no longer fixed in place. Each step forward becomes more uncertain. ",
+      "icon": "narrator_icon"
+    },
+    {
+      "title": "Selkie",
+      "message": "The sea feels closer here… but it is not welcoming. It moves against me, as if it no longer knows me. ",
+      "icon": "selkie_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "You will need to cross moving platforms. Do not rush. Watch how they move before you jump. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Some platforms move up and down, others move side to side. Their motion is constant. Learn their rhythm before committing to a jump. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Jump when the platform is closest to you. Poor timing will cause you to miss and fall. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Narrator",
+      "message": "The sailor’s world has not been left empty. Creatures and remnants now linger across these paths.",
+      "icon": "narrator_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Enemies patrol certain platforms. They move along set paths. Observe their movement and avoid them.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Touching an enemy will cost you a life and return you to your last checkpoint.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Fragments of your seal skin are still scattered here. Some are placed along dangerous routes. You will need to take risks to collect them. ",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Selkie",
+      "message": "Even now, pieces of me are hidden in these places. I will not leave them behind, no matter the danger.",
+      "icon": "selkie_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "The sparkles remain your checkpoints. Reach them whenever possible. They mark your progress through this shifting path.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "If you fall into the ocean or collide with an enemy, you will return to the last checkpoint you activated.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Narrator",
+      "message": "To move forward, you must balance patience and precision. Only those who adapt will continue.",
+      "icon": "narrator_icon"
+    }   
+  ]
+}

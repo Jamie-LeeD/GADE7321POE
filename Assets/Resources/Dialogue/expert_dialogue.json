@@ -1,0 +1,69 @@
+{
+  "dialogues": [
+    {
+      "title": "Narrator",
+      "message": "You have come far. The final pieces of your stolen skin lie ahead, but they are not left unguarded. ",
+      "icon": "narrator_icon"
+    },
+    {
+      "title": "Selkie",
+      "message": "I can feel it now. My skin is close… closer than it has ever been. I will not lose it again.",
+      "icon": "selkie_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "This path will test more than your movement. You will need to think before you act.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Some platforms will not move until you activate them. Look for triggers in the environment and interact with them to create a path forward.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Not every path is visible immediately. You may need to explore carefully to find the way ahead.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Narrator",
+      "message": "A powerful presence guards what remains of your skin. It moves with intent, bound to protect what was taken from you.",
+      "icon": "narrator_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "The enemy does not follow a simple pattern. Its movement changes. Watch it closely before you move.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Do not rush forward. Plan your path, wait for the right moment, and move with purpose.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "One mistake here will cost you. Falling or colliding with the enemy will return you to your last checkpoint.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Use checkpoints carefully. They are your only safeguard in this final stretch.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Guide",
+      "message": "Collect the remaining fragments of your seal skin and reach the final platform.",
+      "icon": "guide_icon"
+    },
+    {
+      "title": "Selkie",
+      "message": "I have come too far to turn back now. I will reclaim what is mine.",
+      "icon": "selkie_icon"
+    },
+    {
+      "title": "Narrator",
+      "message": "When the final fragment is restored, the selkie is no longer bound to the land. At last, she may return to the sea and become whole again.",
+      "icon": "narrator_icon"
+    }   
+  ]
+}
