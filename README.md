@@ -5,7 +5,7 @@ PART 1 - GROUP TASKS
 -------------------------------------------------------------------------------------------------------------------------------------------------
 Project Schedule - [ProjectSchedule_v16_P1.xlsx](https://github.com/user-attachments/files/26375999/ProjectSchedule_v16_P1.xlsx)
 
-Code References & Bibliography - [Uploading Code_References_Bibliography_P1.pdf…]()
+Code References & Bibliography - [Code_References_Bibliography_P1.pdf](https://github.com/user-attachments/files/26378338/Code_References_Bibliography_P1.pdf)
 
 
 PART 1 - INDIVIDUAL TASKS
