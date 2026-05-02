@@ -21,7 +21,7 @@ ST10441037 Video Presentation -
 
 PART 2 - GROUP TASKS
 -------------------------------------------------------------------------------------------------------------------------------------------------
-Project Schedule - 
+Project Schedule - [ProjectSchedule_v23_P2.xlsx](https://github.com/user-attachments/files/27304961/ProjectSchedule_v23_P2.xlsx)
 
 Code References & Bibliography -
 
