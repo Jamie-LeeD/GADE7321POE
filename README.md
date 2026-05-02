@@ -10,18 +10,18 @@ Code References & Bibliography - [Code_References_Bibliography_P1.pdf](https://g
 
 PART 1 - INDIVIDUAL TASKS
 ------------------------------------------------------------------------------------------------------------------------------------------------
-ST10453245 Documentation - 
+ST10453245 Documentation - [ST10453245_IndividualReport_P1.pdf](https://github.com/user-attachments/files/26384745/ST10453245_IndividualReport_P1.pdf)
 
-ST10453245 Video Presentation - 
+ST10453245 Video Presentation - https://canva.link/4gq724o0eemwpqr 
 
 
-ST10441037 Documentation - 
+ST10441037 Documentation - [ST10441037_GADEP1_Report.pdf](https://github.com/user-attachments/files/26384761/ST10441037_GADEP1_Report.pdf)
 
 ST10441037 Video Presentation - 
 
 PART 2 - GROUP TASKS
 -------------------------------------------------------------------------------------------------------------------------------------------------
-Project Schedule - 
+Project Schedule - [ProjectSchedule_v23_P2.xlsx](https://github.com/user-attachments/files/27304961/ProjectSchedule_v23_P2.xlsx)
 
 Code References & Bibliography -
 
