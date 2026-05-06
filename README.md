@@ -25,10 +25,10 @@ Project Schedule - [ProjectSchedule_v23_P2.xlsx](https://github.com/user-attachm
 
 Code References & Bibliography - [Code_References_Bibliography_P2.pdf](https://github.com/user-attachments/files/27449045/Code_References_Bibliography_P2.pdf)
 
-Part 2 INDIVIDUAL TASKS
-------------------------------------------------------------------------------------------------------------------------------------------------
 README General Game Report Documentation - [README_GeneralGameReport_P2.pdf](https://github.com/user-attachments/files/27449079/README_GeneralGameReport_P2.pdf)
 
+Part 2 INDIVIDUAL TASKS
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 ST10453245 Video Presentation - 
 
