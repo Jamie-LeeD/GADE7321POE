@@ -23,7 +23,7 @@ PART 2 - GROUP TASKS
 -------------------------------------------------------------------------------------------------------------------------------------------------
 Project Schedule - [ProjectSchedule_v23_P2.xlsx](https://github.com/user-attachments/files/27304961/ProjectSchedule_v23_P2.xlsx)
 
-Code References & Bibliography -
+Code References & Bibliography - [Code_References_Bibliography_P2.pdf](https://github.com/user-attachments/files/27449045/Code_References_Bibliography_P2.pdf)
 
 Part 2 INDIVIDUAL TASKS
 ------------------------------------------------------------------------------------------------------------------------------------------------
