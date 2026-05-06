@@ -30,6 +30,6 @@ README General Game Report Documentation - [README_GeneralGameReport_P2.pdf](htt
 Part 2 INDIVIDUAL TASKS
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-ST10453245 Video Presentation - 
+ST10453245 Video Presentation - https://canva.link/55m6gytbp41gzc6 
 
 ST10441037 Video Presentation - 
