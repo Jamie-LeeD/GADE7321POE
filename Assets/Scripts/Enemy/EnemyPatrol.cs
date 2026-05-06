@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public Transform[] waypointArray;
+    public Transform waypointParent;
     public MyLinkedList<Transform> waypoints = new MyLinkedList<Transform>();
 
     private MyLinkedList<Transform>.Node currentNode;
@@ -13,8 +13,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        
-        foreach (Transform wp in waypointArray)
+        foreach (Transform wp in waypointParent)
         {
             waypoints.Add(wp);
         }
@@ -36,13 +35,9 @@ public class EnemyPatrol : MonoBehaviour
     void MoveToNextWaypoint()
     {
         if (currentNode.next != null)
-        {
             currentNode = currentNode.next;
-        }
         else
-        {
-            currentNode = waypoints.GetHead(); // loop
-        }
+            currentNode = waypoints.GetHead();
 
         agent.SetDestination(currentNode.data.position);
     }

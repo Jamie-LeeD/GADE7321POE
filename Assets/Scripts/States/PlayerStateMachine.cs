@@ -60,7 +60,7 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
         ApplyGravity();
         Move();
 
-        animator.SetFloat("Speed", moveDirection.magnitude);
+        //animator.SetFloat("Speed", moveDirection.magnitude);
         animator.SetBool("IsGrounded", isGrounded);
     }
 

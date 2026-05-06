@@ -17,8 +17,8 @@ public class AIEnemyFactory : EnemyFactory
         return CreateEnemy(EnemyType.Patrolling, position);
     }
 
-    
-    public Enemy CreateEnemy(EnemyType type, Vector3 position)
+
+    public Enemy CreateEnemy(EnemyType type, Vector3 position, Transform waypointParent = null)
     {
         GameObject prefab = null;
 
@@ -36,6 +36,12 @@ public class AIEnemyFactory : EnemyFactory
         GameObject obj = Object.Instantiate(prefab, position, Quaternion.identity);
         Enemy enemy = obj.GetComponent<Enemy>();
         enemy.Initialize();
+
+        if (type == EnemyType.Patrolling && waypointParent != null)
+        {
+            EnemyPatrol patrol = obj.GetComponent<EnemyPatrol>();
+            patrol.waypointParent = waypointParent;
+        }
 
         return enemy;
     }

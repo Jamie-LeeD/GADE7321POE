@@ -31,7 +31,7 @@ public class MoveState : PlayerState
 
         stateMachine.moveDirection = inputDir * stateMachine.walkSpeed;
 
-        stateMachine.animator.SetFloat("Speed", stateMachine.moveDirection.magnitude);
+        stateMachine.animator.SetFloat("Speed", 1f);
 
         Rotate(inputDir);
 
