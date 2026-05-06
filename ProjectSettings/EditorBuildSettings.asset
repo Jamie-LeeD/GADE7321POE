@@ -13,10 +13,13 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/AdvancedScene.unity
-    guid: 5c8468e9afd61e9489588672f57a04fd
+    guid: 1451c79022cf0bd4b823d49c6231ddd7
   - enabled: 1
     path: Assets/Scenes/ExpertScene.unity
     guid: 54c14076b4f9f7a43ab391c232d520e5
+  - enabled: 0
+    path: Assets/Scenes/NotWorking.unity
+    guid: 5c8468e9afd61e9489588672f57a04fd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

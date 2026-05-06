@@ -14,3 +14,8 @@ public enum GameEventType
     ScoreChanged,
     GameOver
 }
+public enum EnemyType
+{
+    Patrolling,
+    Stationary
+}

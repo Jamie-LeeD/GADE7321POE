@@ -32,6 +32,8 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
 
     private PlayerState currentState;
 
+    private MovingPlatform currentPlatform;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -92,10 +94,32 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
             return;
         }
 
-        Debug.Log("Movement ACTIVE");
+        //Debug.Log("Movement ACTIVE");
 
-        controller.Move((moveDirection + velocity) * Time.deltaTime);
+        Vector3 platformVelocity = Vector3.zero;
+
+        if (currentPlatform != null)
+        {
+            platformVelocity = currentPlatform.Velocity;
+        }
+
+        Vector3 finalMove = moveDirection;
+        finalMove.y = velocity.y;
+
+        controller.Move((finalMove + platformVelocity) * Time.deltaTime);
     }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        MovingPlatform platform = hit.collider.GetComponent<MovingPlatform>();
+
+        if (platform != null && hit.normal.y > 0.5f)
+        {
+            currentPlatform = platform;
+        }
+    }
+    
+
     public Vector3 GetCameraRelativeInput()
     {
         Vector2 moveInput = input.MoveInput;
@@ -138,6 +162,14 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
 
         SimpleEventBus.Instance.RemoveListener(GameEventType.DialogueStart, this);
         SimpleEventBus.Instance.RemoveListener(GameEventType.DialogueEnd, this);
+    }
+
+    void LateUpdate()
+    {
+        if (!isGrounded)
+        {
+            currentPlatform = null;
+        }
     }
 
 }
