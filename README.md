@@ -23,7 +23,7 @@ PART 2 - GROUP TASKS
 -------------------------------------------------------------------------------------------------------------------------------------------------
 Project Schedule - [ProjectSchedule_v23_P2.xlsx](https://github.com/user-attachments/files/27304961/ProjectSchedule_v23_P2.xlsx)
 
-Code References & Bibliography - [Code_References_Bibliography_P2.pdf](https://github.com/user-attachments/files/27449045/Code_References_Bibliography_P2.pdf)
+Code References & Bibliography - [Code_References_Bibliography_P2.pdf](https://github.com/user-attachments/files/27452989/Code_References_Bibliography_P2.pdf)
 
 README General Game Report Documentation - [README_GeneralGameReport_P2.pdf](https://github.com/user-attachments/files/27449079/README_GeneralGameReport_P2.pdf)
 
