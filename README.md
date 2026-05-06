@@ -27,11 +27,9 @@ Code References & Bibliography - [Code_References_Bibliography_P2.pdf](https://g
 
 Part 2 INDIVIDUAL TASKS
 ------------------------------------------------------------------------------------------------------------------------------------------------
-ST10453245 Documentation - 
+README General Game Report Documentation - [README_GeneralGameReport_P2.pdf](https://github.com/user-attachments/files/27449079/README_GeneralGameReport_P2.pdf)
+
 
 ST10453245 Video Presentation - 
-
-
-ST10441037 Documentation - 
 
 ST10441037 Video Presentation - 
