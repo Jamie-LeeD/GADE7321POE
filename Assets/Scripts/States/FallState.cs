@@ -19,7 +19,6 @@ public class FallState : PlayerState
 
     public override void Update()
     {
-        stateMachine.animator.SetBool("IsGrounded", false);
         fallTimer += Time.deltaTime;
 
         Vector3 inputDir = stateMachine.GetCameraRelativeInput();

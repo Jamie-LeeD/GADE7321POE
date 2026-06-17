@@ -13,9 +13,14 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        if (patrollingPrefab == null || stationaryPrefab == null)
+        {
+            Debug.LogError($"{name}: EnemySpawner is missing enemy prefab references.");
+            return;
+        }
+
         factory = new AIEnemyFactory(patrollingPrefab, stationaryPrefab);
 
-        // Spawn enemies
         factory.CreateEnemy(EnemyType.Patrolling, patrollingPos, path1);
         factory.CreateEnemy(EnemyType.Stationary, stationaryPos);
     }

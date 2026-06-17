@@ -17,5 +17,6 @@ public enum GameEventType
 public enum EnemyType
 {
     Patrolling,
-    Stationary
+    Stationary,
+    BossPatrolling
 }

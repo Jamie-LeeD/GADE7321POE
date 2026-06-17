@@ -15,7 +15,7 @@ public class CheckpointManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
     }
 

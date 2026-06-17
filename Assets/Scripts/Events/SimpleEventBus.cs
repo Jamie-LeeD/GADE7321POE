@@ -16,7 +16,7 @@ public class SimpleEventBus : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
     }
 

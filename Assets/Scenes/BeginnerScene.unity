@@ -407,9 +407,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 054205af35efcb942be9610445479a7c, type: 3}
-  m_Resource: {fileID: 8300000, guid: 054205af35efcb942be9610445479a7c, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4018,7 +4018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 98459032}
   sfxSource: {fileID: 664925250}
-  backgroundMusic: {fileID: 8300000, guid: 054205af35efcb942be9610445479a7c, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: cfa71832d0044d146bd0482c928541a7, type: 3}
   buttonClickSFX: {fileID: 8300000, guid: a7f2dda7b0bca0244989d2a9d9ad5e80, type: 3}
 --- !u!1 &2135215352
 GameObject:

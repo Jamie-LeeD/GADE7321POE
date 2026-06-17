@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance;
-
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
@@ -12,20 +10,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip backgroundMusic;
     public AudioClip buttonClickSFX;
 
-    private void Awake()
-    {
-        // Singleton setup
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void Start()
     {
         PlayMusic(backgroundMusic);
@@ -33,8 +17,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioClip clip)
     {
-        if (clip == null) return;
+        if (clip == null || musicSource == null) return;
 
+        musicSource.Stop();
         musicSource.clip = clip;
         musicSource.loop = true;
         musicSource.Play();
@@ -42,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(AudioClip clip)
     {
-        if (clip == null) return;
+        if (clip == null || sfxSource == null) return;
 
         sfxSource.PlayOneShot(clip);
     }

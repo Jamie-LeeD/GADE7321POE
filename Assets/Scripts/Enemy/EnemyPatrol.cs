@@ -9,9 +9,30 @@ public class EnemyPatrol : MonoBehaviour
     private MyLinkedList<Transform>.Node currentNode;
     private NavMeshAgent agent;
 
+    public void Initialize(Transform parent)
+    {
+        waypointParent = parent;
+        BeginPatrol();
+    }
+
     void Start()
     {
+        if (waypoints.Count() == 0)
+        {
+            BeginPatrol();
+        }
+    }
+
+    void BeginPatrol()
+    {
         agent = GetComponent<NavMeshAgent>();
+        waypoints = new MyLinkedList<Transform>();
+
+        if (waypointParent == null)
+        {
+            Debug.LogError($"{name}: EnemyPatrol has no waypoint parent assigned.");
+            return;
+        }
 
         foreach (Transform wp in waypointParent)
         {
@@ -20,13 +41,17 @@ public class EnemyPatrol : MonoBehaviour
 
         currentNode = waypoints.GetHead();
 
-        if (currentNode != null)
+        if (currentNode != null && agent != null)
+        {
             agent.SetDestination(currentNode.data.position);
+        }
     }
 
     void Update()
     {
-        if (agent.remainingDistance < 0.5f)
+        if (agent == null || currentNode == null) return;
+
+        if (!agent.pathPending && agent.remainingDistance <= 0.5f)
         {
             MoveToNextWaypoint();
         }
@@ -34,11 +59,16 @@ public class EnemyPatrol : MonoBehaviour
 
     void MoveToNextWaypoint()
     {
+        if (currentNode == null) return;
+
         if (currentNode.next != null)
             currentNode = currentNode.next;
         else
             currentNode = waypoints.GetHead();
 
-        agent.SetDestination(currentNode.data.position);
+        if (currentNode != null)
+        {
+            agent.SetDestination(currentNode.data.position);
+        }
     }
 }
