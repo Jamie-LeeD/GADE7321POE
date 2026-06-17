@@ -13,6 +13,7 @@ public class FallState : PlayerState
 
     public override void Enter()
     {
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Off);
         fallTimer = 0f;
         hasTriggeredDeath = false;
     }
@@ -44,6 +45,11 @@ public class FallState : PlayerState
         // Landed safely
         if (stateMachine.isGrounded)
         {
+            if (SfxManager.Instance != null)
+            {
+                SfxManager.Instance.PlaySound(SfxKeys.Land);
+            }
+
             stateMachine.ChangeState(new IdleState(stateMachine));
         }
     }

@@ -33,11 +33,13 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
     private PlayerState currentState;
 
     private MovingPlatform currentPlatform;
+    private FootstepController footstepController;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         input = GetComponent<PlayerInput>();
+        footstepController = GetComponent<FootstepController>();
         //animator = GetComponent<Animator>();
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -69,6 +71,17 @@ public class PlayerStateMachine : MonoBehaviour, ISimpleListener
         currentState?.Exit();
         currentState = newState;
         currentState.Enter();
+    }
+
+    /// <summary>
+    /// Lets movement states enable walk or sprint footsteps without polling input here.
+    /// </summary>
+    public void SetFootstepMode(FootstepController.FootstepMode mode)
+    {
+        if (footstepController != null)
+        {
+            footstepController.SetMode(mode);
+        }
     }
 
     void CheckGround()

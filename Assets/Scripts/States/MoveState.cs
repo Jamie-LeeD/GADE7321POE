@@ -6,6 +6,16 @@ public class MoveState : PlayerState
 {
     public MoveState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
+    public override void Enter()
+    {
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Walk);
+    }
+
+    public override void Exit()
+    {
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Off);
+    }
+
     public override void Update()
     {
         Vector3 inputDir = stateMachine.GetCameraRelativeInput();

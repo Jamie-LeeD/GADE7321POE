@@ -9,6 +9,7 @@ public class IdleState : PlayerState
     {
         stateMachine.moveDirection = Vector3.zero;
         stateMachine.animator.SetFloat("Speed", 0f);
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Off);
     }
     public override void Update()
     {

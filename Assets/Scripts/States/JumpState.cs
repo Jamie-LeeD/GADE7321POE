@@ -7,7 +7,7 @@ public class JumpState : PlayerState
 
     public override void Enter()
     {
-        //stateMachine.velocity.y = Mathf.Sqrt(stateMachine.jumpForce * -2f * stateMachine.gravity);
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Off);
         stateMachine.velocity.y = stateMachine.jumpForce;
         stateMachine.animator.SetBool("IsJumping", true);
         stateMachine.animator.SetTrigger("Jump");

@@ -32,9 +32,6 @@ public class PlayerStats : MonoBehaviour, ISimpleListener
         );
     }
 
-    /// <summary>
-    /// Restores lives for secret pickups such as the ExpertScene extra-life reward.
-    /// </summary>
     public void AddLife(int amount = 1)
     {
         lives += amount;

@@ -12,7 +12,8 @@ public enum GameEventType
     RestartGame,
     LivesChanged,
     ScoreChanged,
-    GameOver
+    GameOver,
+    PlaySfx
 }
 public enum EnemyType
 {

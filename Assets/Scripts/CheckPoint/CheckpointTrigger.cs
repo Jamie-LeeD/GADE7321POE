@@ -13,6 +13,12 @@ public class CheckpointTrigger : MonoBehaviour
                 stats.lives,
                 stats.score
             );
+
+            SimpleEventBus.Instance.PostNotification(
+                GameEventType.PlaySfx,
+                this,
+                SfxKeys.Checkpoint
+            );
         }
     }
 }

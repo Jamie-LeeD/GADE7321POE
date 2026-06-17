@@ -7,12 +7,14 @@ public class SprintState : PlayerState
 
     public override void Enter()
     {
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Sprint);
         SimpleEventBus.Instance.PostNotification(GameEventType.SprintStart, stateMachine);
         stateMachine.animator.SetFloat("Speed", 2f);
     }
 
     public override void Exit()
     {
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Off);
         SimpleEventBus.Instance.PostNotification(GameEventType.SprintStop, stateMachine);
     }
 

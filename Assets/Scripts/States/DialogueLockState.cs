@@ -7,6 +7,7 @@ public class DialogueLockState : PlayerState
     public override void Enter()
     {
         Debug.Log("Entered DialogueLockState");
+        stateMachine.SetFootstepMode(FootstepController.FootstepMode.Off);
         stateMachine.canMove = false;
         stateMachine.moveDirection = Vector3.zero;
         stateMachine.velocity = Vector3.zero;

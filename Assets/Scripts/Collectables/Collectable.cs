@@ -12,6 +12,12 @@ public class Collectable : MonoBehaviour
 
             stats.AddScore(value);
 
+            SimpleEventBus.Instance.PostNotification(
+                GameEventType.PlaySfx,
+                this,
+                SfxKeys.Collectible
+            );
+
             Destroy(gameObject);
         }
     }
