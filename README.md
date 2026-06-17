@@ -43,6 +43,6 @@ Code References & Bibliography - [Code_References_Bibliography_P3.pdf](https://g
 
 PART 3 - INDIVIDUAL TASKS
 -------------------------------------------------------------------------------------------------------------------------------------------------
-ST10453245 Video Presentation - 
+ST10453245 Video Presentation - https://canva.link/veypsr2qspc5etp 
 
 ST10441037 Video Presentation - 
