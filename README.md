@@ -33,3 +33,16 @@ Part 2 INDIVIDUAL TASKS
 ST10453245 Video Presentation - https://canva.link/55m6gytbp41gzc6 
 
 ST10441037 Video Presentation - 
+
+
+PART 3 - GROUP TASKS
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Project Schedule - [ProjectSchedule_P3.xlsx](https://github.com/user-attachments/files/29030800/ProjectSchedule_P3.xlsx)
+
+Code References & Bibliography - [Code_References_Bibliography_P3.pdf](https://github.com/user-attachments/files/29030840/Code_References_Bibliography_P3.pdf)
+
+PART 3 - INDIVIDUAL TASKS
+-------------------------------------------------------------------------------------------------------------------------------------------------
+ST10453245 Video Presentation - https://canva.link/veypsr2qspc5etp 
+
+ST10441037 Video Presentation - 
