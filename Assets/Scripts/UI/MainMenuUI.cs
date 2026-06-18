@@ -12,4 +12,9 @@ public class MainMenuUI : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void SelectLevel(int i)
+    {
+        SceneManager.LoadScene(i);  
+    }
 }
